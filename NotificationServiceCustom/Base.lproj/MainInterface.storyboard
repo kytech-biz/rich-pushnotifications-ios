@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationServiceCustom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Zf-kc-MWV">
+                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="vY7-vB-B5c"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mdo-4z-GcN">
+                                <rect key="frame" x="142" y="207" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mdo-4z-GcN" firstAttribute="centerX" secondItem="9Zf-kc-MWV" secondAttribute="centerX" id="3ah-v2-7DN"/>
+                            <constraint firstItem="9Zf-kc-MWV" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="AOH-jP-Rbr"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="9Zf-kc-MWV" secondAttribute="trailing" id="Awc-GQ-csJ"/>
+                            <constraint firstItem="mdo-4z-GcN" firstAttribute="centerY" secondItem="9Zf-kc-MWV" secondAttribute="centerY" constant="-4.5" id="DjR-rr-u8Q"/>
+                            <constraint firstItem="9Zf-kc-MWV" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" id="a6u-3e-bxx"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="9Zf-kc-MWV" secondAttribute="bottom" id="zvy-PM-Qk7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="450"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="mdo-4z-GcN" id="tpv-cY-WRp"/>
+                        <outlet property="webView" destination="9Zf-kc-MWV" id="Wi8-eu-NqT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
